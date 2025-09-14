@@ -1,2 +1,52 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+// Custom styles for welcome landing
+// Keeping additions scoped via .welcome-landing to avoid unintended bleed-over
+
+.welcome-landing {
+	scroll-padding-top: 5rem;
+
+	.hero {
+		padding-top: 1rem;
+		@media (min-width: 992px) {
+			padding-top: 2rem;
+		}
+		h1 { letter-spacing: -0.5px; }
+		.hero-visual {
+			.stat { font-size: .825rem; text-transform: uppercase; letter-spacing: .5px; font-weight: 500; }
+			.value { display: inline-block; font-weight: 600; margin-left: .35rem; }
+		}
+	}
+
+	#features .feature {
+		transition: transform .25s ease, box-shadow .25s ease;
+		&:hover { transform: translateY(-4px); box-shadow: 0 .75rem 1.25rem rgba(0,0,0,.08); }
+		.icon-wrap { color: var(--bs-primary); }
+	}
+
+	#directory table tbody tr {
+		transition: background-color .2s ease;
+		&:hover { background-color: var(--bs-tertiary-bg); }
+	}
+
+	#blogs .blog-card {
+		transition: transform .25s ease, box-shadow .25s ease;
+		&:hover { transform: translateY(-4px); box-shadow: 0 .75rem 1.25rem rgba(0,0,0,.08); }
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+		&::before, &::after {
+			content: ""; position: absolute; inset: 0; pointer-events: none;
+			background:
+				radial-gradient(circle at 20% 30%, rgba(255,255,255,.07), transparent 60%),
+				radial-gradient(circle at 80% 70%, rgba(255,255,255,.08), transparent 65%);
+			mix-blend-mode: screen; opacity: .9;
+		}
+	}
+
+	.placeholder { border-radius: 1rem; }
+}
+
+footer { font-size: .75rem; }
