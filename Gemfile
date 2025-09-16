@@ -58,4 +58,4 @@ group :development do
   gem "web-console"
 end
 
-gem "tidewave", "~> 0.3.0", group: :development
+gem "tidewave", "~> 0.3.1", group: :development
